@@ -8,8 +8,10 @@ from __future__ import print_function
 import base64
 import json
 import os
+import sys
 from getpass import getpass
 import yaml
+import urllib
 from cryptography.hazmat.primitives.serialization import load_pem_public_key
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric.padding import PKCS1v15
@@ -21,7 +23,7 @@ except:
     from urllib.request import urlopen
 
 
-GITHUB_REPO = '{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}'
+GITHUB_REPO = 'hredestig/python_boilerplate'
 TRAVIS_CONFIG_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), '.travis.yml')
 
@@ -58,10 +60,14 @@ def fetch_public_key(repo):
     Travis API docs: http://docs.travis-ci.com/api/#repository-keys
     """
     keyurl = 'https://api.travis-ci.org/repos/{0}/key'.format(repo)
-    data = json.loads(urlopen(keyurl).read().decode())
+    errmsg = ("\n\nCould not find public key for repo: {}.\n"
+              "Have you already added your GitHub repo to Travis?\n\n").format(repo)
+    try:
+        data = json.loads(urlopen(keyurl).read().decode())
+    except urllib.error.HTTPError:
+        sys.stderr.write(errmsg)
+        raise
     if 'key' not in data:
-        errmsg = "Could not find public key for repo: {}.\n".format(repo)
-        errmsg += "Have you already added your GitHub repo to Travis?"
         raise ValueError(errmsg)
     return data['key']
 
