@@ -146,6 +146,5 @@ Which should trigger testing and deployment to PyPI.
 .. _Pytest: http://pytest.org/
 .. _AppVeyor: http://www.appveyor.com/
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _Nose: http://nose.readthedocs.org/
 .. _bumpversion: https://pypi.python.org/pypi/bumpversion
 .. _Codecov: http://codecov.io/
