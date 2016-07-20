@@ -2,7 +2,9 @@
 Cookiecutter for python development at biosustain
 ======================
 
-Cookiecutter_ template for a python package. |travis|
+|travis|
+
+Cookiecutter_ template for a python package. 
 
 .. |travis| image:: http://img.shields.io/travis/biosustain/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
