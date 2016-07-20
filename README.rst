@@ -1,5 +1,5 @@
 ======================
-Cookiecutter for python development at biosustain
+Cookiecutter for python development within DD-DeCaF
 ======================
 
 |travis|
