@@ -14,16 +14,14 @@ Features
 --------
 
 This is a python package cookiecutter template intended for all python
-development at the `center for
-biosustainability<http://biosustain.dtu.dk>`_ (near copy of the
-`cookiecutter-pypackage
+development at the `center for biosustainability
+<http://biosustain.dtu.dk>`_ (near copy of the `cookiecutter-pypackage
 <https://github.com/audreyr/cookiecutter-pypackage>`_). Using this
 template, it is easy to get your project setup for using
 
 * Tox_ for managing test environments for different versions of Python.
 * Travis-CI_ and AppVeyor_ for continuous testing.
-  * All pushes are triggers testing and tagged pushes to master
-    triggers upload to PyPI
+  * All pushes are triggers testing and tagged pushes to master triggers upload to PyPI
 * Coveralls_ or for coverage tracking (using Tox_).
 * Documentation with Sphinx_, ready for ReadTheDocs_.
 * Easy version tagging with bumpversion_
@@ -94,17 +92,13 @@ To run all the tests, just run::
 
   tox
 
-To see all the tox environments::
+To make the documentation::
 
-  tox -l
-
-To only build the docs::
-
-  tox -e docs
+  make docs
 
 To build and verify that the built package is proper and other code QA checks::
 
-  tox -e check
+  make check
 
 Releasing the project
 `````````````````````
