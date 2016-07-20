@@ -8,32 +8,37 @@ Cookiecutter_ template for a python package. |travis| |appveyor|
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/biosustain/cookiecutter-decaf-python
 
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/biosustain/cookiecutter-decaf-python/master.svg?style=flat&label=AppVeyor
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/biosustain/cookiecutter-decaf-python
-
 .. contents:: Table of Contents
 
 Features
 --------
 
-This is a python package cookiecutter template intended for all python development at the `center for biosustainability<http://biosustain.dtu.dk>`. Using this template, it is easy to get your project setup for using
+This is a python package cookiecutter template intended for all python
+development at the `center for
+biosustainability<http://biosustain.dtu.dk>`_ (near copy of the
+`cookiecutter-pypackage
+<https://github.com/audreyr/cookiecutter-pypackage>`_). Using this
+template, it is easy to get your project setup for using
 
 * Tox_ for managing test environments for different versions of Python.
 * Travis-CI_ and AppVeyor_ for continuous testing.
+  * All pushes are triggers testing and tagged pushes to master
+    triggers upload to PyPI
 * Coveralls_ or for coverage tracking (using Tox_).
 * Documentation with Sphinx_, ready for ReadTheDocs_.
 * Easy version tagging with bumpversion_
-* Support for C extensions (including coverage measurement for the C
-  code).
 * Packaging and code quality checks. This template comes with a tox
   environment (``check``) that will:
-
   * Check if your ``README.rst`` is valid.
   * Check if the ``MANIFEST.in`` has any issues.
   * Run ``flake8`` (a combo of PEP8, pyflakes and McCabe checks)
 
-This template is a near-copy of the `cookiecutter-pylibrary<https://github.com/ionelmc/cookiecutter-pylibrary>`_ template.
+The only differences to cookiecutter-pypackage is the addition of
+
+* (optional) use of testing and deployment with AppVeyor
+* mandatory use of unit-testing (with pytest)
+* support github organizations
+
 
 Requirements
 ------------
@@ -122,13 +127,19 @@ When all lights are green, build the ``sdist``, and if possible, the ``bdist_whe
 
     python setup.py clean --all sdist bdist_wheel
 
-To make a release of the project on PyPI, we upload the created
-distribution files using `twine
+**If you don't use Travis/AppVeyor:** To make a release of the project
+on PyPI, we upload the created distribution files using `twine
 <https://pypi.python.org/pypi/twine>`_::
 
     twine register dist/*
     twine upload --skip-existing dist/*
 
+**If you do use Travis/AppVeyor:** Simply make a release by pushing the new tag::
+
+    git push -t <new version>
+
+Which should trigger testing and deployment to PyPI.
+  
 .. _Travis-CI: http://travis-ci.org/
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
