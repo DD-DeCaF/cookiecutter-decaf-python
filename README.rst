@@ -115,14 +115,15 @@ Which will also make the commit and the appropriate git tag.
 After incrementing the version, but before creating a new release,
 check that the package tests correctly::
 
-    tox -e check
+    tox
 
-When all lights are green, build the ``sdist``, and if possible, the ``bdist_wheel`` too::
+**If you don't use Travis/AppVeyor:** build the ``sdist``, and if
+ possible, the ``bdist_wheel`` too::
 
     python setup.py clean --all sdist bdist_wheel
 
-**If you don't use Travis/AppVeyor:** To make a release of the project
-on PyPI, we upload the created distribution files using `twine
+And then to make a release of the project on PyPI, we upload the
+created distribution files using `twine
 <https://pypi.python.org/pypi/twine>`_::
 
     twine register dist/*
