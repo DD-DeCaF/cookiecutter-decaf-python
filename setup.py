@@ -8,7 +8,7 @@ setup(
     description='Cookiecutter template for a Python package at Biosustain',
     author='Henning Redestig',
     license='BSD',
-    author_email='henning@dtu.dk',
+    author_email='henred@dtu.dk',
     url='https://github.com/biosustain/cookiecutter-decaf-python',
     keywords=['cookiecutter', 'template', 'package', ],
     classifiers=[
