@@ -8,7 +8,7 @@ Cookiecutter_ template for a python package.
 
 .. |travis| image:: http://img.shields.io/travis/dd-decaf/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/dd-decaf/cookiecutter-decaf-python
+    :target: https://travis-ci.org/DD-DeCaF/cookiecutter-decaf-python
 
 .. contents:: Table of Contents
 
