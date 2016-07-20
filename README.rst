@@ -6,9 +6,9 @@ Cookiecutter for python development at biosustain
 
 Cookiecutter_ template for a python package. 
 
-.. |travis| image:: http://img.shields.io/travis/hredestig/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
+.. |travis| image:: http://img.shields.io/travis/dd-decaf/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/hredestig/cookiecutter-decaf-python
+    :target: https://travis-ci.org/dd-decaf/cookiecutter-decaf-python
 
 .. contents:: Table of Contents
 
@@ -61,7 +61,7 @@ Usage and options
 
 First generate your project::
 
-  cookiecutter gh:hredestig/cookiecutter-decaf-python
+  cookiecutter gh:dd-decaf/cookiecutter-decaf-python
 
 You will be asked for a number of different items, including if you
 want to use continuous integration (travis / appveyor), code coverage
