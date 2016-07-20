@@ -2,7 +2,7 @@
 Cookiecutter for python development at biosustain
 ======================
 
-Cookiecutter_ template for a python package. |travis| |appveyor|
+Cookiecutter_ template for a python package. |travis|
 
 .. |travis| image:: http://img.shields.io/travis/biosustain/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
@@ -63,7 +63,7 @@ First generate your project::
 
 You will be asked for a number of different items, including if you
 want to use continuous integration (travis / appveyor), code coverage
-etc. If you create many new packags you may consider adding defaults
+etc. If you create many new packages you may consider adding defaults
 in ``~/.cookiecutterrc``.
 
 After this you can create the initial repository (make sure you
