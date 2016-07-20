@@ -6,9 +6,9 @@ Cookiecutter for python development at biosustain
 
 Cookiecutter_ template for a python package. 
 
-.. |travis| image:: http://img.shields.io/travis/biosustain/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
+.. |travis| image:: http://img.shields.io/travis/hredestig/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/biosustain/cookiecutter-decaf-python
+    :target: https://travis-ci.org/hredestig/cookiecutter-decaf-python
 
 .. contents:: Table of Contents
 
@@ -61,7 +61,7 @@ Usage and options
 
 First generate your project::
 
-  cookiecutter gh:biosustain/cookiecutter-decaf-python
+  cookiecutter gh:hredestig/cookiecutter-decaf-python
 
 You will be asked for a number of different items, including if you
 want to use continuous integration (travis / appveyor), code coverage
@@ -74,7 +74,7 @@ After this you can create the initial repository (make sure you
   git init .
   git add .
   git commit -m "Initial skel."
-  git remote add origin git@github.com:biosustain/<new package>.git
+  git remote add origin git@github.com:<organization/user>/<new package>.git
   git push -u origin master
 
 Then:
