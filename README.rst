@@ -6,7 +6,7 @@ Cookiecutter for python development within DD-DeCaF
 
 Cookiecutter_ template for a python package. 
 
-.. |travis| image:: http://img.shields.io/travis/dd-decaf/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
+.. |travis| image:: http://img.shields.io/travis/DD-DeCaF/cookiecutter-decaf-python/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/DD-DeCaF/cookiecutter-decaf-python
 

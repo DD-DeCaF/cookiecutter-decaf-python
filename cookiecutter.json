@@ -11,6 +11,7 @@
 	"use_pypi_deployment_with_travis": "y",
 	"use_appveyor": "y",
 	"use_pypi_deployment_with_appveyor": "y",
+	"coverage_with_codecov": "y",
 	"create_author_file": "y",
 	"open_source_license": ["GNU General Public License v3", "Apache Software License 2.0", "Not open source"]
 }
