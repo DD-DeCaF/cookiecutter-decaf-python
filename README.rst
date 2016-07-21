@@ -80,7 +80,7 @@ After this you can create the initial repository (make sure you
 Then:
 
 * `Enable the repository in your Travis CI account <https://travis-ci.org/profile>`_.
-* `Enable the repository in your Coveralls account <https://coveralls.io/repos/new>`_.
+* `Enable the repository in your codecov account <https://codecov.io/>`_.
 * `Add the repo to your ReadTheDocs account
   <https://readthedocs.org/dashboard/import/>`_ + turn on the
   ReadTheDocs service hook. Don't forget to enable virtualenv and
@@ -136,11 +136,10 @@ created distribution files using `twine
     git push -t <new version>
 
 Which should trigger testing and deployment to PyPI.
-  
+
 .. _Travis-CI: http://travis-ci.org/
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
-.. _Coveralls: https://coveralls.io/
 .. _ReadTheDocs: https://readthedocs.org/
 .. _Setuptools: https://pypi.python.org/pypi/setuptools
 .. _Pytest: http://pytest.org/
