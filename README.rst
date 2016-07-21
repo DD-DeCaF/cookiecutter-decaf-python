@@ -31,7 +31,8 @@ template, it is easy to get your project setup for using
   environment (``check``) that will:
   * Check if your ``README.rst`` is valid.
   * Check if the ``MANIFEST.in`` has any issues.
-  * Run ``flake8`` (a combo of PEP8, pyflakes and McCabe checks)
+  * Run ``flake8`` (a combo of PEP8, pyflakes and McCabe checks) and
+    pydocstyle_
 
 The only differences to cookiecutter-pypackage is the addition of
 
@@ -147,3 +148,4 @@ Which should trigger testing and deployment to PyPI.
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _bumpversion: https://pypi.python.org/pypi/bumpversion
 .. _Codecov: http://codecov.io/
+.. _pydocstyle: https://github.com/PyCQA/pydocstyle
