@@ -15,7 +15,11 @@ Cookiecutter_ template for a python package.
 Features
 --------
 
-This is a python package cookiecutter template intended for all python
+In the DD-DeCaF project, `we aim to write high-quality software
+<whitepaper.md>`_ that both implements great features and are ensured
+to be long term operable and sustainable.
+
+In this is a python package cookiecutter template intended for all python
 development at the `center for biosustainability
 <http://biosustain.dtu.dk>`_ (near copy of the `cookiecutter-pypackage
 <https://github.com/audreyr/cookiecutter-pypackage>`_). Using this
