@@ -22,7 +22,7 @@
 
 When it comes to the question of *software quality* in computational biology it is useful to make a distinction between *programmatic data analysis* and *software development*. The first is the process of writing instructions for a computer to analyze a given dataset and produce the desired result. The focus on a single task allows the researcher to progress relatively fast and to do little additional work than working out the biological and mathematical/statistical theory. Numerous great algorithms, methods and models have been implemented this way with corresponding rapid insights. Software development on the other hand, is the process of creating a tool that can reliably be used by someone else than the original author to perform that analysis for a different dataset, using a different computer and without direct communication with the original developer. 
 
-The importance of achieving results that are not only novel and exciting but also usable by other researchers have been highlighted by recent difficulties to reproduce many published findings in general and to apply them to new datasets in particular \cite{peng_reproducible_2011}. As a reaction to this, good practice for scientific software development have been forth \cite{prlic_ten_2012,wilson_best_2014} and thanks to readily available tools to aid software engineering there are now few reasons for not writing software that is understandable and that works well.
+The importance of achieving results that are not only novel and exciting but also usable by other researchers have been highlighted by [recent difficulties](http://science.sciencemag.org/content/334/6060/1226) to reproduce many published findings in general and to apply them to new datasets in particular \cite{peng_reproducible_2011}. As a reaction to this, [good practice](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002802) for [scientific software development](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745) have been forth \cite{prlic_ten_2012,wilson_best_2014} and thanks to readily available tools to aid software engineering there are now few reasons for not writing software that is understandable and that works well.
 
 In the DD-DeCaF project, we aim to make state-of-the-art algorithms, models and visualization techniques readily available not only to ourselves but also to the community in general and for this to be possible it is essential that we adhere to a minimum of good software development practice. Here, we highlight the most central aspects of such practice and make recommendations for how to adopt these when developing in our main language of choice for scientific computing - python.
 
@@ -54,21 +54,21 @@ All software, whether stated or not, comes with copyright and terms for usage, m
 
 The last few years has seen the emergence of widely available software engineering tools, often provided free of charge, that greatly facilitates writing high quality software. However, since the number of available tools is quite large, and configuring them for your own project can be a hurdle, we recommend using templates that can be used to rapidly initialize a new project.
 
-One such templating tool is **cookiecutter** <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> which can create software templates for any programming language given the corresponding template. In order to simply the creation of new python packages in the DD-DeCaF project, we created the **cookiecutter-decaf-python** template which by answering a few questions from the user rapidly can setup new python projects that:
+One such templating tool is [**cookiecutter**](https://github.com/audreyr/cookiecutter) which can create software templates for any programming language given the corresponding template. In order to simply the creation of new python packages in the DD-DeCaF project, we created the **cookiecutter-decaf-python** template which by answering a few questions from the user rapidly can setup new python projects that:
 
 1.  Is automatically checked for consistent coding style using the
-    **flake8** tool <sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> which implements the standard
-    guidelines called PEP8 <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>.
-2.  Uses **pydocstyle** <sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>to check that documentation is available and
+    [**flake8 tool**](http://flake8.pycqa.org/en/latest/) which implements the standard
+    guidelines called [PEP8](https://www.python.org/dev/peps/pep-0008/).
+2.  Uses [**pydocstyle**](https://github.com/PyCQA/pydocstyle) to check that documentation is available and
     correctly formatted for rendering on websites such as
     **readthedocs.org** <https://readthedocs.org/>
 3.  Uses **git** and GitHub for version control and easy collaboration with
     other developers.
-4.  Uses **pytest** <sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>for writing unit-test
-5.  **codecov.io** <sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>to check how much of the
+4.  Uses [**pytest**](http://docs.pytest.org/en/latest/) for writing unit-test
+5.  [\*codecov.io](https://codecov.io)\* to check how much of the
     code is being addressed by those tests.
-6.  Uses **Travis** <sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup> for continuous integration /
-    testing on Linux and **AppVeyor** <sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup> for Windows.
+6.  Uses [**Travis**](https://travis-ci.org/) for continuous integration /
+    testing on Linux and [**AppVeyor**](https://ci.appveyor.com/) for Windows.
 7.  Has an explicit license file included in the package.
 
 Starting a new python package can be done by at a shell issuing
@@ -79,27 +79,3 @@ Starting a new python package can be done by at a shell issuing
 and answering the questions that are asked at the prompt. After that, go to the various mentioned websites and in most cases you simplify have to login using your GitHub account and enable the desired service - your project already has the necessary configuration files.
 
 Taken together, the adherence to the principles above, jointly make up a static code quality metric that indicates how healthy the current code base is - our aim is that all software written in DD-DeCaF both implements great features and score well on these metrics to ensure long term operability and sustainability.
-
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
-
-<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><https://github.com/audreyr/cookiecutter></div></div>
-
-<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><http://flake8.pycqa.org/en/latest/></div></div>
-
-<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><https://www.python.org/dev/peps/pep-0008/></div></div>
-
-<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><https://github.com/PyCQA/pydocstyle></div></div>
-
-<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><http://docs.pytest.org/en/latest/></div></div>
-
-<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><https://codecov.io></div></div>
-
-<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><https://travis-ci.org/></div></div>
-
-<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><https://ci.appveyor.com/></div></div>
-
-
-</div>
-</div>

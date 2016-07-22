@@ -1,4 +1,4 @@
-x#+TITLE: Guidelines and quality metrics for programming code developed within the DD-DeCaF project
+#+TITLE: Guidelines and quality metrics for programming code developed within the DD-DeCaF project
 #+AUTHOR: Henning Redestig and Nikolas Sonnenschein
 #+BIBLIOGRAPHY: whitepaper
 #+LaTeX: \bibliographystyle{apalike}
@@ -7,7 +7,7 @@ x#+TITLE: Guidelines and quality metrics for programming code developed within t
 
 When it comes to the question of /software quality/ in computational biology it is useful to make a distinction between /programmatic data analysis/ and /software development/. The first is the process of writing instructions for a computer to analyze a given dataset and produce the desired result. The focus on a single task allows the researcher to progress relatively fast and to do little additional work than working out the biological and mathematical/statistical theory. Numerous great algorithms, methods and models have been implemented this way with corresponding rapid insights. Software development on the other hand, is the process of creating a tool that can reliably be used by someone else than the original author to perform that analysis for a different dataset, using a different computer and without direct communication with the original developer. 
 
-The importance of achieving results that are not only novel and exciting but also usable by other researchers have been highlighted by recent difficulties to reproduce many published findings in general and to apply them to new datasets in particular \cite{peng_reproducible_2011}. As a reaction to this, good practice for scientific software development have been forth \cite{prlic_ten_2012,wilson_best_2014} and thanks to readily available tools to aid software engineering there are now few reasons for not writing software that is understandable and that works well.
+The importance of achieving results that are not only novel and exciting but also usable by other researchers have been highlighted by [[http://science.sciencemag.org/content/334/6060/1226][recent difficulties]] to reproduce many published findings in general and to apply them to new datasets in particular \cite{peng_reproducible_2011}. As a reaction to this, [[http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002802][good practice]] for [[http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745][scientific software development]] have been forth \cite{prlic_ten_2012,wilson_best_2014} and thanks to readily available tools to aid software engineering there are now few reasons for not writing software that is understandable and that works well.
 
 In the DD-DeCaF project, we aim to make state-of-the-art algorithms, models and visualization techniques readily available not only to ourselves but also to the community in general and for this to be possible it is essential that we adhere to a minimum of good software development practice. Here, we highlight the most central aspects of such practice and make recommendations for how to adopt these when developing in our main language of choice for scientific computing - python.
 * Characteristics of good software
@@ -33,21 +33,21 @@ All software, whether stated or not, comes with copyright and terms for usage, m
 * Template
 The last few years has seen the emergence of widely available software engineering tools, often provided free of charge, that greatly facilitates writing high quality software. However, since the number of available tools is quite large, and configuring them for your own project can be a hurdle, we recommend using templates that can be used to rapidly initialize a new project.
 
-One such templating tool is *cookiecutter* [fn:1] which can create software templates for any programming language given the corresponding template. In order to simply the creation of new python packages in the DD-DeCaF project, we created the *cookiecutter-decaf-python* template which by answering a few questions from the user rapidly can setup new python projects that:
+One such templating tool is [[https://github.com/audreyr/cookiecutter][*cookiecutter*]] which can create software templates for any programming language given the corresponding template. In order to simply the creation of new python packages in the DD-DeCaF project, we created the *cookiecutter-decaf-python* template which by answering a few questions from the user rapidly can setup new python projects that:
 
 1. Is automatically checked for consistent coding style using the
-   *flake8* tool [fn:2] which implements the standard
-   guidelines called PEP8 [fn:3].
-2. Uses *pydocstyle* [fn:8]to check that documentation is available and
+   [[http://flake8.pycqa.org/en/latest/][*flake8 tool*]] which implements the standard
+   guidelines called [[https://www.python.org/dev/peps/pep-0008/][PEP8]].
+2. Uses [[https://github.com/PyCQA/pydocstyle][*pydocstyle*]] to check that documentation is available and
    correctly formatted for rendering on websites such as
    *readthedocs.org* https://readthedocs.org/
 3. Uses *git* and GitHub for version control and easy collaboration with
    other developers.
-4. Uses *pytest* [fn:4]for writing unit-test
-5. *codecov.io* [fn:5]to check how much of the
+4. Uses [[http://docs.pytest.org/en/latest/][*pytest*]] for writing unit-test
+5. [[https://codecov.io][*codecov.io]]* to check how much of the
    code is being addressed by those tests.
-6. Uses *Travis* [fn:6] for continuous integration /
-   testing on Linux and *AppVeyor* [fn:7] for Windows.
+6. Uses [[https://travis-ci.org/][*Travis*]] for continuous integration /
+   testing on Linux and [[https://ci.appveyor.com/][*AppVeyor*]] for Windows.
 7. Has an explicit license file included in the package.
 
 Starting a new python package can be done by at a shell issuing
@@ -67,22 +67,3 @@ Taken together, the adherence to the principles above, jointly make up a static 
 # zotero-collection: #("57" 0 2 (name "decaf"))
 # End:
 
-* Footnotes
-
-[fn:1] https://github.com/audreyr/cookiecutter
-
-[fn:2] http://flake8.pycqa.org/en/latest/
-
-[fn:3] https://www.python.org/dev/peps/pep-0008/
-
-[fn:4] http://docs.pytest.org/en/latest/
-
-[fn:5] https://codecov.io
-
-[fn:6] https://travis-ci.org/
-
-[fn:7] https://ci.appveyor.com/
-
-[fn:8] https://github.com/PyCQA/pydocstyle
-
- 
