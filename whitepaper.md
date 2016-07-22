@@ -65,7 +65,7 @@ One such templating tool is [**cookiecutter**](https://github.com/audreyr/cookie
 3.  Uses **git** and GitHub for version control and easy collaboration with
     other developers.
 4.  Uses [**pytest**](http://docs.pytest.org/en/latest/) for writing unit-test
-5.  [**codecov.io**](https://codecov.io)\* to check how much of the
+5.  [**codecov.io**](https://codecov.io) to check how much of the
     code is being addressed by those tests.
 6.  Uses [**Travis**](https://travis-ci.org/) for continuous integration /
     testing on Linux and [**AppVeyor**](https://ci.appveyor.com/) for Windows.
