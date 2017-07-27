@@ -1,17 +1,16 @@
 {
-	"full_name": "Henning Redestig",
-	"email": "henred@dtu.dk",
-	"github_username": "hredestig",
-	"github_organization": "{{ cookiecutter.github_username }}",
+	"full_name": "First Last",
+	"email": "you@biosustain.dtu.dk",
+	"github_username": "octocat",
+	"github_organization": ["DD-DeCaF", "Biosustain"],
 	"project_name": "python boilerplate decaf",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-	"project_short_description": "Python Boilerplate CfB contains all the boilerplate you need to create a Python package within the DeCaF project",
+	"project_short_description": "Python Boilerplate CfB contains all the boilerplate you need to create a Python package within the DD-DeCaF project.",
 	"pypi_username": "{{ cookiecutter.github_username }}",
 	"version": "0.1.0",
 	"use_pypi_deployment_with_travis": "y",
 	"use_appveyor": "y",
 	"use_pypi_deployment_with_appveyor": "y",
-	"coverage_with_codecov": "y",
 	"create_author_file": "y",
-	"open_source_license": ["GNU General Public License v3", "Apache Software License 2.0", "Not open source"]
+	"open_source_license": ["Apache Software License 2.0", "Proprietary"]
 }

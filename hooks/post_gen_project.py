@@ -16,14 +16,14 @@ if __name__ == '__main__':
     if '{{ cookiecutter.use_appveyor }}' != 'y':
         remove_file('appveyor.yaml')
 
-    if 'Not open source' == '{{ cookiecutter.open_source_license }}':
+    if '{{ cookiecutter.open_source_license }}' == 'Proprietary':
         remove_file('LICENSE')
 
     print("\n\n {{ cookiecutter.project_name }} generated. Consider ")
     print(" - creating the corresponding github repository and then ")
     print(("   git remote add origin git@github.com:"
-           "{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git "))
-    print("   git push -u origin master ") 
+           "{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}.git "))
+    print("   git push -u origin master ")
     if '{{ cookiecutter.use_pypi_deployment_with_travis }}' != 'y':
         remove_file('travis_pypi_setup.py')
     else:
