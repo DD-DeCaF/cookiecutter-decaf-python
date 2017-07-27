@@ -1,19 +1,35 @@
+branches:
+ only:
+   - master
+   - devel
+
 environment:
   matrix:
     - PYTHON: "C:\\Python27-x64"
-      PYTHON_VERSION: "2.7.12"
+      PYTHON_VERSION: "2.7"
       PYTHON_ARCH: "64"
-      TOX_ENV: "py27"
+      TOXENV: "py27"
 
     - PYTHON: "C:\\Python34-x64"
-      PYTHON_VERSION: "3.4.5"
+      PYTHON_VERSION: "3.4"
       PYTHON_ARCH: "64"
-      TOX_ENV: "py34"
+      TOXENV: "py34"
 
     - PYTHON: "C:\\Python35-x64"
-      PYTHON_VERSION: "3.5.2"
+      PYTHON_VERSION: "3.5"
       PYTHON_ARCH: "64"
-      TOX_ENV: "py35"
+      TOXENV: "py35"
+
+    - PYTHON: "C:\\Python36-x64"
+      PYTHON_VERSION: "3.6"
+      PYTHON_ARCH: "64"
+      TOXENV: "py36"
+
+matrix:
+  fast_finish: true
+
+clone_depth: 2
+
 {% if cookiecutter.use_pypi_deployment_with_appveyor == 'y' -%}
   password:
     secure: COPY PASTE FROM APPVEYORS ONLINE ENCRYPTION TOOL
@@ -28,14 +44,12 @@ init:
 
 install:
   - "%PYTHON%/Scripts/easy_install -U pip"
-  - "%PYTHON%/Scripts/pip install tox"
-  - "%PYTHON%/Scripts/pip install wheel"
-  - "%PYTHON%/Scripts/pip install twine"
+  - "%PYTHON%/Scripts/pip install -U setuptools wheel tox{% if cookiecutter.use_pypi_deployment_with_appveyor == 'y' -%} twine {% endif %}"
 
 build: false
 
 test_script:
-  - "%PYTHON%/Scripts/tox -e %TOX_ENV%"
+  - "%PYTHON%/Scripts/tox -e %TOXENV%"
 
 after_test:
   - "%PYTHON%/python setup.py bdist_wheel"
