@@ -1,7 +1,7 @@
 # Config file for automatic testing at travis-ci.org
 # This file will be regenerated if you run travis_pypi_setup.py
 
-language: generic
+language: python
 sudo: false
 
 git:
@@ -14,13 +14,6 @@ branches:
   only:
     - master
     - devel
-
-env:
-  - TOXENV=flake8
-  - TOXENV=py27
-  - TOXENV=py34
-  - TOXENV=py35
-  - TOXENV=py36
 
 matrix:
   fast_finish: true
@@ -46,19 +39,29 @@ matrix:
       env:
         - TOXENV=py36
     - os: osx
-      language: objective-c
-      python: 3.6
+      language: generic
       env:
-        - TOXENV=py36
+        - PYENV_VERSION=2.7
+          TOXENV=py27
+    - os: osx
+      language: generic
+      env:
+        - PYENV_VERSION=3.6
+          TOXENV=py36
 
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 before_install:
-  - travis_retry pip install -U pip setuptools wheel tox
+  - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
+        brew update;
+        brew install pyenv
+        travis_retry pyenv install "${PYENV_VERSION}"
+    fi
+  - travis_retry pip install -U pip setuptools wheel tox{% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%} twine{% endif %}
 
-# command to run tests, tox automatically uses TOXENV
+# command to run tests
 script:
-  - tox
+  - tox -e "${TOXENV}"
 
 {% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}
 # After you create the Github repo and add it to Travis, run the
