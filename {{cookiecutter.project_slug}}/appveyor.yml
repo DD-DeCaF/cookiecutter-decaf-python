@@ -44,7 +44,7 @@ init:
 
 install:
   - "%PYTHON%/Scripts/easy_install -U pip"
-  - "%PYTHON%/Scripts/pip install -U setuptools wheel tox{% if cookiecutter.use_pypi_deployment_with_appveyor == 'y' -%} twine {% endif %}"
+  - "%PYTHON%/Scripts/pip install -U setuptools wheel tox{% if cookiecutter.use_pypi_deployment_with_appveyor == 'y' %} twine{% endif %}"
 
 build: false
 
