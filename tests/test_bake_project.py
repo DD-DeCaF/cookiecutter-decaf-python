@@ -148,7 +148,7 @@ def test_bake_selecting_license(cookies):
         # 'BSD license': 'Redistributions of source code must retain the above copyright notice, this',
         # 'ISC license': 'ISC License',
         'Apache Software License 2.0': 'Licensed under the Apache License, Version 2.0',
-        'GNU General Public License v3': 'GNU GENERAL PUBLIC LICENSE',
+        # 'GNU General Public License v3': 'GNU GENERAL PUBLIC LICENSE',
     }
     for license, target_string in license_strings.items():
         with bake_in_temp_dir(cookies, extra_context={'open_source_license': license}) as result:
@@ -157,7 +157,7 @@ def test_bake_selecting_license(cookies):
 
 
 def test_bake_not_open_source(cookies):
-    with bake_in_temp_dir(cookies, extra_context={'open_source_license': 'Not open source'}) as result:
+    with bake_in_temp_dir(cookies, extra_context={'open_source_license': 'Proprietary'}) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert 'setup.py' in found_toplevel_files
         assert 'LICENSE' not in found_toplevel_files

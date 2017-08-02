@@ -14,8 +14,11 @@ Contents:
    readme
    installation
    usage
+   support
    contributing
-   {% if cookiecutter.create_author_file == 'y' -%}authors{% endif -%}
+{%- if cookiecutter.create_author_file == 'y' %}
+    authors
+{%- endif %}
    history
 
 Indices and tables
