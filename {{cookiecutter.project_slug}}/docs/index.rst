@@ -14,6 +14,7 @@ Contents:
    readme
    installation
    usage
+   support
    contributing
    {% if cookiecutter.create_author_file == 'y' -%}authors{% endif -%}
    history
