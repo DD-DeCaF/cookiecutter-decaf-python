@@ -56,7 +56,7 @@ All software, whether stated or not, comes with copyright and terms for usage, m
 
 The last few years has seen the emergence of widely available software engineering tools, often provided free of charge, that greatly facilitates writing high quality software. However, since the number of available tools is quite large, and configuring them for your own project can be a hurdle, we recommend using templates that can be used to rapidly initialize a new project.
 
-One such templating tool is [**cookiecutter**](https://github.com/audreyr/cookiecutter) which can create software templates for any programming language given the corresponding template. In order to simply the creation of new python packages in the DD-DeCaF project, we created the **cookiecutter-decaf-python** template which by answering a few questions from the user rapidly can setup new python projects that:
+One such templating tool is [**cookiecutter**](https://github.com/audreyr/cookiecutter) which can create software templates for any programming language given the corresponding template. In order to simplify the creation of new python packages in the DD-DeCaF project, we created the **cookiecutter-decaf-python** template which by answering a few questions from the user rapidly can setup new python projects that:
 
 1.  Is automatically checked for consistent coding style using the
     [**flake8 tool**](http://flake8.pycqa.org/en/latest/) which implements the standard
@@ -78,6 +78,6 @@ Starting a new python package can be done by at a shell issuing
     pip install cookiecutter
     cookiecutter gh:dd-decaf/cookiecutter-decaf-python
 
-and answering the questions that are asked at the prompt. After that, go to the various mentioned websites and in most cases you simplify have to login using your GitHub account and enable the desired service - your project already has the necessary configuration files.
+and answering the questions that are asked at the prompt. After that, go to the various mentioned websites and in most cases you simply have to login using your GitHub account and enable the desired service - your project already has the necessary configuration files.
 
 Taken together, the adherence to the principles above, jointly make up a static code quality metric that indicates how healthy the current code base is - our aim is that all software written in DD-DeCaF both implements great features and score well on these metrics to ensure long term operability and sustainability.
