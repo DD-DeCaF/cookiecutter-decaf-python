@@ -14,6 +14,7 @@ branches:
   only:
     - master
     - devel
+    - "/v\\d+\\.\\d+\\.\\d+/"
 
 matrix:
   fast_finish: true
@@ -69,7 +70,7 @@ deploy:
     tags: true
     branch: master
     repo: {{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}
-    condition: $TOXENV == py27
+    condition: $TRAVIS_PYTHON_VERSION == "3.6"
 {%- endif %}
 
 notifications:
