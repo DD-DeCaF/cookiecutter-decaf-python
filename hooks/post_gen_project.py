@@ -31,7 +31,8 @@ if __name__ == '__main__':
     print("\n\n {{ cookiecutter.project_name }} generated. Consider ")
     print(" - creating the corresponding github repository and then ")
     print(("   git remote add origin git@github.com:"
-           "{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}.git "))
+           "{{ cookiecutter.github_organization }}/"
+           "{{ cookiecutter.project_slug }}.git "))
     print("   git push -u origin master ")
     if '{{ cookiecutter.use_pypi_deployment_with_travis }}' != 'y':
         remove_file('travis_pypi_setup.py')
@@ -44,4 +45,3 @@ if __name__ == '__main__':
         print((" - instructing appveyor to build your project and then\n"
                "   updating the encrypted pypi password in appveyor.yml\n"))
     print("\n\n")
-
