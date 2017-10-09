@@ -5,9 +5,9 @@ from __future__ import absolute_import, print_function
 
 import sys
 from os import remove
-from os.path import join, realpath
+from os.path import join, realpath, curdir
 
-PROJECT_DIRECTORY = realpath(os.path.curdir)
+PROJECT_DIRECTORY = realpath(curdir)
 
 
 def remove_file(filename):
