@@ -1,11 +1,20 @@
 #!/usr/bin/env python
-import os
+# -*- coding: utf-8 -*-
 
-PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+from __future__ import absolute_import, print_function
+
+import sys
+from os import remove
+from os.path import join, realpath
+
+PROJECT_DIRECTORY = realpath(os.path.curdir)
 
 
-def remove_file(filepath):
-    os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
+def remove_file(filename):
+    try:
+        remove(join(PROJECT_DIRECTORY, filename))
+    except OSError as err:
+        print(str(err), file=sys.stderr)
 
 
 if __name__ == '__main__':
