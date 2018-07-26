@@ -22,7 +22,8 @@ Create a [minimal, complete, verifiable example
 ### Context
 
 <details>
-* Operating System:
-* Python version:
-* {{ cookiecutter.project_name }} version:
+
+Please paste the output of `python -c "from {{cookiecutter.project_module}} 
+import show_versions;show_versions()" here.`
+
 </details>

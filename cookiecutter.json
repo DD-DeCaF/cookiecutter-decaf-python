@@ -1,16 +1,16 @@
 {
-	"full_name": "First Last",
-	"email": "you@biosustain.dtu.dk",
-	"github_username": "octocat",
-	"github_organization": ["DD-DeCaF", "Biosustain"],
-	"project_name": "python boilerplate decaf",
-	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-	"project_short_description": "Python Boilerplate CfB contains all the boilerplate you need to create a Python package within the DD-DeCaF project.",
-	"pypi_username": "{{ cookiecutter.github_username }}",
-	"version": "0.1.0",
-	"use_pypi_deployment_with_travis": "y",
-	"use_appveyor": "y",
-	"use_pypi_deployment_with_appveyor": "y",
-	"create_author_file": "y",
-	"open_source_license": ["Apache Software License 2.0", "Proprietary"]
+  "full_name": "Novo Nordisk Foundation Center for Biosustainability, Technical University Denmark",
+  "email": "you@biosustain.dtu.dk",
+  "github_account": "DD-DeCaF",
+  "project_name": "python boilerplate decaf",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_module": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_short_description": "Python Boilerplate CfB contains all the boilerplate you need to create a Python package within the DD-DeCaF project.",
+  "pypi_username": "{{ cookiecutter.github_account }}",
+  "version": "0.1.0",
+  "release_date": "{% now 'local' %}",
+  "year": "{{ cookiecutter.release_date[:4] }}",
+  "_extensions": [
+    "jinja2_time.TimeExtension"
+  ]
 }

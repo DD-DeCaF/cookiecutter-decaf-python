@@ -1,2 +1,3 @@
 Sphinx
-numpydoc
+sphinxcontrib-napoleon
+sphinx-bootstrap-theme
