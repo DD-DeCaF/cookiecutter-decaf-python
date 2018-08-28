@@ -1,4 +1,4 @@
-.PHONY : clean clean-build clean-pyc clean-test docs release help
+.PHONY : clean clean-build clean-pyc clean-test view docs release help
 .DEFAULT_GOAL := help
 
 define BROWSER_PYSCRIPT
@@ -40,6 +40,9 @@ docs:
 	sphinx-apidoc -o docs/ src/{{cookiecutter.project_module}}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
+
+## View the documentation
+view: docs
 	$(BROWSER) docs/_build/html/index.html
 
 ## Create a release
