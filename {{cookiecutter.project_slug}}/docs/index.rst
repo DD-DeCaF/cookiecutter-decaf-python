@@ -13,9 +13,9 @@ Contents
     :maxdepth: 1
 
     usage
-    support
     installation
-    modules
+    reference
+    support
     authors
     changelog
     contributing

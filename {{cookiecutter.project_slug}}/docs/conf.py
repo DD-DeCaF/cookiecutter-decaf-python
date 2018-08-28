@@ -17,6 +17,8 @@ from os.path import join, pardir, dirname
 
 sys.path.insert(0, join(dirname(__file__), pardir, 'src'))
 
+from {{cookiecutter.project_module}} import __version__
+
 # -- Project information -----------------------------------------------------
 
 project = '{{cookiecutter.project_name}}'
@@ -25,13 +27,8 @@ author = '{{cookiecutter.full_name}}'
 
 # -- Version information -----------------------------------------------------
 
-# sys.path.insert(0, join(dirname(__file__), pardir))
-# import versioneer
-# del sys.path[0]
-
-# The full version, including alpha/beta/rc tags
-# release = versioneer.get_version()
-release = '{{cookiecutter.version}}'
+# The full semantic version, including alpha/beta/rc tags.
+release = __version__
 # The short X.Y version assumes semantic versioning.
 version = '.'.join(release.split('.', 2)[:2])
 
