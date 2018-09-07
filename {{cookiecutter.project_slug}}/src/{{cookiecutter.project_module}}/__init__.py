@@ -1,7 +1,6 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Copyright (c) {{cookiecutter.year}} {{cookiecutter.full_name}}
+# Copyright (c) {{ cookiecutter.year }} {{ cookiecutter.full_name }}
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,18 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Install the {{cookiecutter.project_module}} package."""
+"""{{cookiecutter.project_short_description}}"""
 
 from __future__ import absolute_import
 
-import versioneer
-from setuptools import setup
+__author__ = '{{ cookiecutter.full_name }}'
+__email__ = '{{ cookiecutter.email }}'
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
 
-
-# All other arguments are defined in `setup.cfg`.
-setup(
-    version=versioneer.get_version(),
-    cmdclass=versioneer.get_cmdclass(),
-    # Temporary workaround for https://github.com/pypa/setuptools/issues/1136.
-    package_dir={"": "src"}
-)
+from {{cookiecutter.project_module}}.utils import *

@@ -67,3 +67,4 @@ target/
 /whitepaper.pdf
 /whitepaper.tex
 auto
+.gitignore

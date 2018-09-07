@@ -1,7 +1,6 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Copyright (c) {{cookiecutter.year}} {{cookiecutter.full_name}}
+# Copyright (c) {{ cookiecutter.year }} {{ cookiecutter.full_name }}
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,18 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Install the {{cookiecutter.project_module}} package."""
+"""Provide general utility functions."""
 
 from __future__ import absolute_import
 
-import versioneer
-from setuptools import setup
+from depinfo import print_dependencies
 
 
-# All other arguments are defined in `setup.cfg`.
-setup(
-    version=versioneer.get_version(),
-    cmdclass=versioneer.get_cmdclass(),
-    # Temporary workaround for https://github.com/pypa/setuptools/issues/1136.
-    package_dir={"": "src"}
-)
+__all__ = ("show_versions",)
+
+
+def show_versions():
+    """Print system and Python environment dependency information."""
+    print_dependencies("{{cookiecutter.project_slug}}")
