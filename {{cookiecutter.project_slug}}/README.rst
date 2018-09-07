@@ -37,6 +37,7 @@ ToDo
 Before doing much else you should go through the following steps to fully enable
 all the testing goodies of this repository:
 
+* Move the ``pre-commit`` file to ``.git/hooks/``.
 * Create a `GitHub <https://github.com/>`_ account and import your local
   repository.
 * Create an account at `Read the Docs <https://readthedocs.org>`_ import your

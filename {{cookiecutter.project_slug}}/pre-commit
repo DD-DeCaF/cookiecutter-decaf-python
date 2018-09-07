@@ -17,3 +17,4 @@
 set -eux
 
 make docs
+git add .
